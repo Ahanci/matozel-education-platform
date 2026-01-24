@@ -3,14 +3,12 @@
 import Link from "next/link";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { ArrowRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
-const Meteors = dynamic(() => import("@/components/ui/meteors").then((mod) => mod.Meteors), {
-  ssr: false,
-});
 const Spotlight = dynamic(() => import("@/components/ui/spotlight").then((mod) => mod.Spotlight), {
   ssr: false,
 });
@@ -35,8 +33,8 @@ export function HeroSection() {
         fill="hsl(var(--primary))"
       />
 
-      <div className="absolute inset-0 overflow-hidden">
-        <Meteors number={30} className="opacity-40" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <BackgroundBeams />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -3,7 +3,6 @@
 import React from "react"
 
 import { motion } from "framer-motion";
-import { Meteors } from "@/components/ui/meteors";
 import { Button } from "@/components/ui/button";
 import {
   BookOpen,
@@ -101,7 +100,7 @@ export function SubjectHero({ subject, city, exam, grade }: SubjectHeroProps) {
 
   return (
     <section className="relative min-h-[60vh] flex items-center pt-24 pb-16 overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
-      <Meteors number={20} />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:50px_50px]" />
 
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
 

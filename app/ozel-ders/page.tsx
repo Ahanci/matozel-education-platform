@@ -1,7 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { AllSubjectsGrid } from "@/components/all-subjects-grid";
-import { Meteors } from "@/components/ui/meteors";
 import { allSubjects, levels, exams, cities } from "@/lib/data";
 import type { Metadata } from "next";
 
@@ -17,8 +16,8 @@ export default function OzelDersPage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative pt-24 pb-16 overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
-        <Meteors number={15} />
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">

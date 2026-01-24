@@ -1,7 +1,7 @@
+
 "use client";
 
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { Meteors } from "@/components/ui/meteors";
 import {
   BookOpen,
   Code2,
@@ -22,7 +22,7 @@ const services = [
     className: "md:col-span-1",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent relative overflow-hidden">
-        <Meteors number={10} />
+        <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       </div>
     ),
   },
@@ -34,7 +34,7 @@ const services = [
     className: "md:col-span-1",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-accent/10 via-accent/5 to-transparent relative overflow-hidden">
-        <Meteors number={8} />
+        <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       </div>
     ),
   },
@@ -46,7 +46,7 @@ const services = [
     className: "md:col-span-1",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-chart-3/10 via-chart-3/5 to-transparent relative overflow-hidden">
-        <Meteors number={12} />
+        <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       </div>
     ),
   },
@@ -58,7 +58,7 @@ const services = [
     className: "md:col-span-2",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-chart-5/10 via-chart-5/5 to-transparent relative overflow-hidden">
-        <Meteors number={15} />
+        <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       </div>
     ),
   },
@@ -70,7 +70,7 @@ const services = [
     className: "md:col-span-1",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-chart-4/10 via-chart-4/5 to-transparent relative overflow-hidden">
-        <Meteors number={8} />
+        <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       </div>
     ),
   },

@@ -4,7 +4,6 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Meteors } from "@/components/ui/meteors";
 import { cities, exams } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -128,7 +127,6 @@ export default function LGSOzelDersClientPage() {
 
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
-        <Meteors number={15} />
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
