@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   BookOpen,
@@ -90,7 +90,7 @@ const examData = Object.values(exams).map((exam) => ({
   link: `/sinav-koclugu/${exam.slug}`,
 }));
 
-const subjectData = allSubjects.map((subject) => {
+const subjectData = allSubjects.slice(0, 8).map((subject) => {
   const iconMap: Record<string, React.ReactNode> = {
     turkce: <BookOpen className="w-6 h-6" />,
     matematik: <Calculator className="w-6 h-6" />,
@@ -165,10 +165,10 @@ export function ServicesGridSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
@@ -184,10 +184,10 @@ export function ServicesGridSection() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           className="flex justify-center mb-12"
         >
           <div className="inline-flex bg-secondary/50 p-1.5 rounded-xl backdrop-blur-sm border border-border">
@@ -196,7 +196,7 @@ export function ServicesGridSection() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={cn(
-                  "flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300",
+                  "flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-colors duration-150",
                   activeTab === tab.id
                     ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
                     : "text-muted-foreground hover:text-foreground hover:bg-secondary/80",
@@ -210,23 +210,22 @@ export function ServicesGridSection() {
         </motion.div>
 
         <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-          >
-            {content.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-              >
-                <Link href={item.link} className="block">
-                  <motion.div
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.2 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        >
+          {content.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, delay: Math.min(index * 0.03, 0.15) }}
+            >
+              <Link href={item.link} className="block">
+                <motion.div
                     whileHover={{ y: -5, scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="group relative h-full p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-all duration-300 overflow-hidden"

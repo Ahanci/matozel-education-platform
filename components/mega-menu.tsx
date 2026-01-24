@@ -259,7 +259,9 @@ export function MegaMenu({ className }: MegaMenuProps) {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm">AYT</h3>
-                    <p className="text-xs text-muted-foreground">11-12. Sınıf</p>
+                    <p className="text-xs text-muted-foreground">
+                      11-12. Sınıf
+                    </p>
                   </div>
                 </div>
                 <div className="space-y-1">
@@ -296,7 +298,9 @@ export function MegaMenu({ className }: MegaMenuProps) {
         </button>
         {activeMenu === "sehirler" && (
           <div className="absolute top-full left-0 mt-1 w-[400px] bg-card rounded-xl shadow-xl border p-6 z-50">
-            <h3 className="font-semibold text-sm mb-4">Hizmet Verdiğimiz Şehirler</h3>
+            <h3 className="font-semibold text-sm mb-4">
+              Hizmet Verdiğimiz Şehirler
+            </h3>
             <div className="grid grid-cols-2 gap-2">
               {cities.map((city) => (
                 <Link
@@ -402,11 +406,37 @@ export function MegaMenu({ className }: MegaMenuProps) {
 }
 
 // Mobile Menu
-export function MobileMenu() {
+export interface MobileMenuProps {
+  onClose?: () => void;
+}
+
+function NavLink({
+  href,
+  children,
+  className,
+  ...props
+}: {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  [key: string]: any;
+}) {
+  return (
+    <Link href={href} className={className} {...props}>
+      {children}
+    </Link>
+  );
+}
+
+export function MobileMenu({ onClose }: MobileMenuProps) {
   const [openSection, setOpenSection] = React.useState<string | null>(null);
 
   const toggleSection = (section: string) => {
     setOpenSection(openSection === section ? null : section);
+  };
+
+  const handleLinkClick = () => {
+    onClose?.();
   };
 
   return (
@@ -424,7 +454,7 @@ export function MobileMenu() {
           <ChevronDown
             className={cn(
               "w-4 h-4 transition-transform",
-              openSection === "dersler" && "rotate-180"
+              openSection === "dersler" && "rotate-180",
             )}
           />
         </button>
@@ -434,6 +464,7 @@ export function MobileMenu() {
               <Link
                 key={subject.slug}
                 href={`/ozel-ders/${subject.slug}`}
+                onClick={handleLinkClick}
                 className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary"
               >
                 {subject.name}
@@ -456,7 +487,7 @@ export function MobileMenu() {
           <ChevronDown
             className={cn(
               "w-4 h-4 transition-transform",
-              openSection === "sinavlar" && "rotate-180"
+              openSection === "sinavlar" && "rotate-180",
             )}
           />
         </button>
@@ -464,18 +495,21 @@ export function MobileMenu() {
           <div className="mt-2 ml-4 space-y-1">
             <Link
               href="/ozel-ders/matematik/lgs"
+              onClick={handleLinkClick}
               className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary font-medium text-accent"
             >
               LGS Hazırlık
             </Link>
             <Link
               href="/ozel-ders/matematik/tyt"
+              onClick={handleLinkClick}
               className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary font-medium text-primary"
             >
               TYT Hazırlık
             </Link>
             <Link
               href="/ozel-ders/matematik/ayt"
+              onClick={handleLinkClick}
               className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary font-medium text-chart-3"
             >
               AYT Hazırlık
@@ -497,7 +531,7 @@ export function MobileMenu() {
           <ChevronDown
             className={cn(
               "w-4 h-4 transition-transform",
-              openSection === "seviyeler" && "rotate-180"
+              openSection === "seviyeler" && "rotate-180",
             )}
           />
         </button>
@@ -510,6 +544,7 @@ export function MobileMenu() {
               <Link
                 key={grade.slug}
                 href={`/ozel-ders/matematik/${grade.slug}`}
+                onClick={handleLinkClick}
                 className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary"
               >
                 {grade.name}
@@ -522,6 +557,7 @@ export function MobileMenu() {
               <Link
                 key={grade.slug}
                 href={`/ozel-ders/matematik/${grade.slug}`}
+                onClick={handleLinkClick}
                 className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary"
               >
                 {grade.name}
@@ -544,7 +580,7 @@ export function MobileMenu() {
           <ChevronDown
             className={cn(
               "w-4 h-4 transition-transform",
-              openSection === "sehirler" && "rotate-180"
+              openSection === "sehirler" && "rotate-180",
             )}
           />
         </button>
@@ -554,6 +590,7 @@ export function MobileMenu() {
               <Link
                 key={city.slug}
                 href={`/ozel-ders/matematik/${city.slug}`}
+                onClick={handleLinkClick}
                 className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary"
               >
                 {city.name}
@@ -566,6 +603,7 @@ export function MobileMenu() {
       {/* Yazılım */}
       <Link
         href="/ozel-ders/yazilim"
+        onClick={handleLinkClick}
         className="flex items-center gap-2 px-4 py-3 text-sm font-medium rounded-lg hover:bg-secondary"
       >
         <Code className="w-4 h-4" />

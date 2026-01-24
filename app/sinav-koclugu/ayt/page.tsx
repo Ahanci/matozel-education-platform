@@ -23,8 +23,7 @@ import {
 import Link from "next/link";
 import { Meteors } from "@/components/ui/meteors";
 
-export const dynamic = "force-static";
-export const revalidate = 86400;
+
 
 const aytSayisal = [
   { name: "Matematik", questions: 40, icon: Calculator, color: "bg-blue-500", href: "/ozel-ders/matematik/ayt" },

@@ -1,19 +1,26 @@
 "use client";
 
-import Image from "next/image";
+import Link from "next/link";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
-import { Meteors } from "@/components/ui/meteors";
-import { Spotlight } from "@/components/ui/spotlight";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { ArrowRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const Meteors = dynamic(() => import("@/components/ui/meteors").then((mod) => mod.Meteors), {
+  ssr: false,
+});
+const Spotlight = dynamic(() => import("@/components/ui/spotlight").then((mod) => mod.Spotlight), {
+  ssr: false,
+});
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image
+        <OptimizedImage
           src="/images/education-bg.jpg"
           alt="Online education background"
           fill

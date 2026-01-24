@@ -21,8 +21,7 @@ import {
 import Link from "next/link";
 import { Meteors } from "@/components/ui/meteors";
 
-export const dynamic = "force-static";
-export const revalidate = 86400;
+
 
 const lgsSubjects = [
   { name: "Türkçe", questions: 20, icon: BookOpen, color: "bg-red-500" },

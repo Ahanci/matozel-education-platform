@@ -22,8 +22,7 @@ import {
 import Link from "next/link";
 import { Meteors } from "@/components/ui/meteors";
 
-export const dynamic = "force-static";
-export const revalidate = 86400;
+
 
 const tytSubjects = [
   {

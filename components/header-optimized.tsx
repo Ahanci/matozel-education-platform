@@ -4,14 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X, GraduationCap } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import { MegaMenu, MobileMenu } from "@/components/mega-menu";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-xl border-b border-border/40 supports-[backdrop-filter]:bg-background/60">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
@@ -44,28 +43,7 @@ export function Header() {
         </div>
       </nav>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-b border-border max-h-[80vh] overflow-y-auto"
-          >
-            <div className="px-4">
-              <MobileMenu onClose={() => setIsOpen(false)} />
-              <div className="flex flex-col gap-2 py-4 border-t">
-                <Button variant="ghost" size="sm" className="w-full">
-                  Giriş Yap
-                </Button>
-                <Button size="sm" className="w-full">
-                  Ücretsiz Dene
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isOpen && <MobileMenu onClose={() => setIsOpen(false)} />}
     </header>
   );
 }
