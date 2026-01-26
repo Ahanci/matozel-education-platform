@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Sparkles, Brain, TrendingUp, Cpu } from "lucide-react";
 

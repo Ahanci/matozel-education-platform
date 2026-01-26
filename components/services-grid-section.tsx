@@ -137,7 +137,7 @@ const subjectData = allSubjects.slice(0, 8).map((subject) => {
     description: subject.description,
     icon: iconMap[subject.slug] || <BookOpen className="w-6 h-6" />,
     gradient: gradientMap[subject.slug] || "from-gray-500 to-gray-600",
-    link: `/ozel-ders/${subject.slug}`,
+    link: "/ozel-ders",
   };
 });
 
@@ -210,22 +210,25 @@ export function ServicesGridSection() {
         </motion.div>
 
         <AnimatePresence mode="wait">
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.2 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-        >
-          {content.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 5 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: Math.min(index * 0.03, 0.15) }}
-            >
-              <Link href={item.link} className="block">
-                <motion.div
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          >
+            {content.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.2,
+                  delay: Math.min(index * 0.03, 0.15),
+                }}
+              >
+                <Link href={item.link} className="block">
+                  <motion.div
                     whileHover={{ y: -5, scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="group relative h-full p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-all duration-300 overflow-hidden"

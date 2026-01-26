@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react"
+import React from "react";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -108,9 +108,7 @@ export function AllSubjectsGrid() {
           {filteredSubjects.map((subject, index) => {
             const Icon = iconMap[subject.icon] || BookOpen;
             const href =
-              filter === "lgs" ||
-              filter === "tyt" ||
-              filter === "ayt"
+              filter === "lgs" || filter === "tyt" || filter === "ayt"
                 ? `/ozel-ders/${subject.slug}/${filter}`
                 : `/ozel-ders/${subject.slug}`;
 
@@ -166,7 +164,7 @@ export function AllSubjectsGrid() {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {levels.ortaokul.grades.map((grade) => (
-                <Link key={grade.slug} href={`/ozel-ders/matematik/${grade.slug}`}>
+                <Link key={grade.slug} href={`/ozel-ders/sinif/${grade.slug}`}>
                   <Card className="hover:shadow-lg hover:border-accent/50 transition-all group">
                     <CardContent className="p-4 flex items-center justify-between">
                       <span className="font-medium group-hover:text-accent transition-colors">
@@ -177,7 +175,7 @@ export function AllSubjectsGrid() {
                   </Card>
                 </Link>
               ))}
-              <Link href="/ozel-ders/matematik/lgs">
+              <Link href="/ozel-ders/lgs">
                 <Card className="bg-accent/10 hover:bg-accent/20 border-accent/30 transition-all group">
                   <CardContent className="p-4 flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -208,7 +206,7 @@ export function AllSubjectsGrid() {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {levels.lise.grades.map((grade) => (
-                <Link key={grade.slug} href={`/ozel-ders/matematik/${grade.slug}`}>
+                <Link key={grade.slug} href={`/ozel-ders/sinif/${grade.slug}`}>
                   <Card className="hover:shadow-lg hover:border-primary/50 transition-all group">
                     <CardContent className="p-4 flex items-center justify-between">
                       <span className="font-medium group-hover:text-primary transition-colors">
@@ -221,7 +219,7 @@ export function AllSubjectsGrid() {
               ))}
             </div>
             <div className="grid sm:grid-cols-2 gap-4 mt-4">
-              <Link href="/ozel-ders/matematik/tyt">
+              <Link href="/ozel-ders/tyt">
                 <Card className="bg-primary/10 hover:bg-primary/20 border-primary/30 transition-all group">
                   <CardContent className="p-4 flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -239,7 +237,7 @@ export function AllSubjectsGrid() {
                   </CardContent>
                 </Card>
               </Link>
-              <Link href="/ozel-ders/matematik/ayt">
+              <Link href="/ozel-ders/ayt">
                 <Card className="bg-chart-3/10 hover:bg-chart-3/20 border-chart-3/30 transition-all group">
                   <CardContent className="p-4 flex items-center justify-between">
                     <div className="flex items-center gap-2">
