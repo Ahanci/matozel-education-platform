@@ -9,7 +9,7 @@ const _spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'MatÖzel | Özel Ders ve Sınav Koçluğu',
-  description: 'Ortaokul ve lise öğrencileri için birebir özel ders, LGS-TYT-AYT sınav koçluğu ve yazılım eğitimi. Türkiye genelinde online ve yüz yüze eğitim.',
+  description: 'Ortaokul ve lise öğrencileri için birebir özel ders, LGS-TYT-AYT sınav koçluğu ve yazılım eğitimi. Türkiye genelinde yapay zeka destekli %100 online eğitim.',
   generator: 'v0.app',
   icons: {
     icon: [

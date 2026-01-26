@@ -146,7 +146,7 @@ export function SubjectCTA({ subject, exam }: SubjectCTAProps) {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-2xl font-bold mb-4">
-                    Ücretsiz Danışmanlık Alın
+                    Detaylı Bilgi Alın
                   </h3>
                   <p className="text-primary-foreground/80 mb-6">
                     Hangi paketin size uygun olduğunu bilmiyor musunuz? Eğitim
@@ -175,7 +175,7 @@ export function SubjectCTA({ subject, exam }: SubjectCTAProps) {
                   <div className="flex items-center gap-4 p-6 rounded-2xl bg-primary-foreground/10">
                     <Calendar className="w-12 h-12" />
                     <div>
-                      <p className="font-semibold">Ücretsiz Deneme Dersi</p>
+                      <p className="font-semibold">20 dk Deneme Dersi</p>
                       <p className="text-sm text-primary-foreground/80">
                         İlk dersiniz bizden!
                       </p>

@@ -114,7 +114,7 @@ export default function AYTKocluguPage() {
                 <Link href="#paketler">Paketleri İncele</Link>
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent" asChild>
-                <Link href="/iletisim">Ücretsiz Danışmanlık</Link>
+                <Link href="/iletisim">Bilgi Alın</Link>
               </Button>
             </div>
 
@@ -329,12 +329,12 @@ export default function AYTKocluguPage() {
               AYT Başarısı İçin Doğru Adres
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-              Ücretsiz alan belirleme danışmanlığı ile size en uygun programı oluşturalım.
+              Alan belirleme danışmanlığı ile size en uygun programı oluşturalım.
               Türkiye geneli aynı gün kaynak gönderimi ile hiç zaman kaybetmeyin.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="text-lg px-8 bg-purple-600 hover:bg-purple-700">
-                Ücretsiz Kayıt Ol
+                Hemen Başvur
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
                 0850 XXX XX XX

@@ -28,7 +28,7 @@ const pricingPlans = [
     features: [
       "8 Saat Canlı Ders",
       "+1 Saat Yazılım Dersi Hediye",
-      "Ücretsiz Kaynak Gönderimi",
+      "Kaynak Gönderimi",
       "Haftalık Planlama",
       "WhatsApp Soru Çözümü",
       "Ayda 1 Deneme Analizi",
@@ -70,7 +70,7 @@ export function PricingSection() {
             Bütçenize Uygun Eğitim Paketleri
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Tüm paketlerimizde ilk ders ücretsiz deneme imkanı sunuyoruz.
+            Tüm paketlerimizde 20 dk online deneme dersi imkanı sunuyoruz.
           </p>
         </motion.div>
 

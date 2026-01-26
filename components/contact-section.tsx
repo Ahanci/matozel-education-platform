@@ -29,7 +29,7 @@ export function ContactSection() {
             Sorularınız mı Var?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Ücretsiz danışmanlık için bizimle iletişime geçin. Size en uygun
+            Detaylı bilgi için bizimle iletişime geçin. Size en uygun
             eğitim programını birlikte belirleyelim.
           </p>
         </motion.div>
@@ -92,7 +92,7 @@ export function ContactSection() {
             className="bg-card rounded-2xl p-8 border border-border"
           >
             <h3 className="text-xl font-semibold text-card-foreground mb-6">
-              Ücretsiz Danışmanlık Formu
+              İletişim Formu
             </h3>
             <form className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">

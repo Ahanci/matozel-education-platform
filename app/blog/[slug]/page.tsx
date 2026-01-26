@@ -128,7 +128,7 @@ export default async function BlogPostPage({ params }: Props) {
                     href="/iletisim"
                     className="inline-block px-8 py-3 bg-background text-foreground rounded-lg font-medium hover:bg-background/90 transition-colors"
                   >
-                    Ücretsiz Deneme Dersi Al
+                    20 dk Deneme Dersi Al
                   </Link>
                 </CardContent>
               </Card>

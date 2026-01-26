@@ -167,7 +167,7 @@ export function SeoSubjectsGrid() {
                             KAMPANYA
                         </div>
                         <p className="px-4 font-medium">
-                            8 Ders Paketi Alana + <span className="text-primary font-bold">1 Ücretsiz Yazılım Dersi</span> Hediye!
+                            8 Ders Paketi Alana + <span className="text-primary font-bold">1 Hediye Yazılım Dersi</span>!
                         </p>
                         <Button size="lg" className="rounded-xl ml-auto w-full md:w-auto">
                             Hemen Başvur

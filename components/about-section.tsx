@@ -1,32 +1,30 @@
-"use client";
-
 import { motion } from "framer-motion";
-import { Award, Clock, Heart, Shield } from "lucide-react";
+import { Sparkles, Brain, TrendingUp, Cpu } from "lucide-react";
 
 const features = [
   {
-    icon: Award,
-    title: "Uzman Kadro",
+    icon: Sparkles,
+    title: "AI Kişiselleştirme",
     description:
-      "Alanında deneyimli ve sertifikalı öğretmenlerden oluşan kadromuz.",
+      "Yapay zeka öğrenme hızınızı analiz eder ve size özel ders planı oluşturur.",
   },
   {
-    icon: Heart,
-    title: "Kişisel İlgi",
+    icon: Brain,
+    title: "Akıllı Koçluk",
     description:
-      "Her öğrenciye özel hazırlanan ders planları ve birebir ilgi.",
+      "AI destekli koçluk sistemi sürekli gelişiminizi takip eder ve önerilerde bulunur.",
   },
   {
-    icon: Clock,
-    title: "Esnek Zamanlama",
+    icon: TrendingUp,
+    title: "Performans Analizi",
     description:
-      "Size uygun saatlerde, online veya yüz yüze ders imkanı.",
+      "Her ders sonrası detaylı AI analizi ile güçlü ve zayıf yönlerinizi görün.",
   },
   {
-    icon: Shield,
-    title: "Garanti Başarı",
+    icon: Cpu,
+    title: "%100 Online",
     description:
-      "Hedef puanına ulaşamayan öğrencilere ek ders garantisi.",
+      "Evden çıkmadan, dilediğiniz zaman yapay zeka destekli eğitim alın.",
   },
 ];
 
@@ -48,31 +46,33 @@ export function AboutSection() {
               Hakkımızda
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-              Eğitimde Fark Yaratan Yaklaşım
+              Yapay Zeka ile Eğitimde Yeni Dönem
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              2018&apos;den beri binlerce öğrenciye eğitim desteği sağlıyoruz.
-              Amacımız sadece ders anlatmak değil, öğrencilerimize öğrenmeyi
-              öğretmek ve onları hayata hazırlamak.
+              MatÖzel olarak, yapay zeka teknolojisini eğitimle birleştirerek 
+              her öğrenciye özel, kişiselleştirilmiş online öğrenme deneyimi sunuyoruz.
+              AI destekli sistemimiz, öğrenme hızınızı ve stilinizi analiz ederek 
+              size en uygun ders planını oluşturur.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Her öğrenci farklıdır ve farklı öğrenme stillerine sahiptir.
-              Bu yüzden kişiselleştirilmiş eğitim planları hazırlıyor ve
-              düzenli takip ile başarıyı garanti altına alıyoruz.
+              Sadece ders anlatmıyoruz; yapay zeka koçumuz sürekli gelişiminizi 
+              takip ediyor, zorlandığınız konuları tespit ediyor ve başarınızı 
+              maksimize etmek için öneriler sunuyor. Yazılım eğitiminden sınav 
+              koçluğuna, tüm hizmetlerimiz %100 online ve AI destekli.
             </p>
 
             <div className="flex gap-8">
               <div>
-                <div className="text-3xl font-bold text-primary">7+</div>
-                <div className="text-sm text-muted-foreground">Yıllık Deneyim</div>
+                <div className="text-3xl font-bold text-primary">AI</div>
+                <div className="text-sm text-muted-foreground">Destekli Sistem</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary">2000+</div>
-                <div className="text-sm text-muted-foreground">Mezun Öğrenci</div>
+                <div className="text-sm text-muted-foreground">Başarılı Öğrenci</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">%98</div>
-                <div className="text-sm text-muted-foreground">Memnuniyet</div>
+                <div className="text-3xl font-bold text-primary">%100</div>
+                <div className="text-sm text-muted-foreground">Online</div>
               </div>
             </div>
           </motion.div>

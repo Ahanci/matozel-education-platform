@@ -158,7 +158,7 @@ export default function BlogPage() {
                     href="/iletisim"
                     className="px-8 py-3 bg-background text-foreground rounded-lg font-medium hover:bg-background/90 transition-colors"
                   >
-                    Ücretsiz Deneme Dersi
+                    20 dk Deneme Dersi
                   </Link>
                   <Link
                     href="/sinav-koclugu"

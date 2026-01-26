@@ -207,7 +207,7 @@ export function SubjectHero({ subject, city, exam, grade }: SubjectHeroProps) {
                 Hemen Ara
               </Button>
               <Button size="lg" variant="outline" className="gap-2 bg-transparent">
-                Ücretsiz Deneme Dersi
+                20 dk Deneme Dersi
               </Button>
             </motion.div>
           </div>

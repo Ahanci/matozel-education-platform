@@ -148,7 +148,7 @@ export default function TYTKocluguPage() {
                 className="text-lg px-8 bg-transparent"
                 asChild
               >
-                <Link href="/iletisim">Ücretsiz Danışmanlık</Link>
+                <Link href="/iletisim">Bilgi Alın</Link>
               </Button>
             </div>
 
@@ -406,7 +406,7 @@ export default function TYTKocluguPage() {
               TYT Başarısı İçin İlk Adımı At
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-              Ücretsiz seviye tespit sınavı ile mevcut durumunuzu öğrenin.
+              Seviye tespit sınavı ile mevcut durumunuzu öğrenin.
               Türkiye'nin her köşesine aynı gün kaynak gönderimi ile zaman
               kaybetmeyin.
             </p>
@@ -415,7 +415,7 @@ export default function TYTKocluguPage() {
                 size="lg"
                 className="text-lg px-8 bg-blue-600 hover:bg-blue-700"
               >
-                Ücretsiz Kayıt Ol
+                Hemen Başvur
               </Button>
               <Button
                 size="lg"

@@ -154,7 +154,7 @@ export default function LGSKocluguPage() {
                 className="text-lg px-8 bg-transparent"
                 asChild
               >
-                <Link href="/iletisim">Ücretsiz Danışmanlık</Link>
+                <Link href="/iletisim">Detaylı Bilgi Al</Link>
               </Button>
             </div>
 
@@ -401,13 +401,13 @@ export default function LGSKocluguPage() {
               LGS Yolculuğuna Bugün Başla
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-              Ücretsiz seviye tespit sınavı ve danışmanlık görüşmesi ile
+              Kişiye özel seviye tespit sınavı ve danışmanlık görüşmesi ile
               hedeflerinizi belirleyelim. Türkiye'nin her yerine aynı gün kaynak
               gönderimi ile hiç zaman kaybetmeyin.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="text-lg px-8">
-                Ücretsiz Kayıt Ol
+                Hemen Başvur
               </Button>
               <Button
                 size="lg"

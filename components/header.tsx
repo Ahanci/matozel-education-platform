@@ -27,7 +27,7 @@ export function Header() {
             <Button variant="ghost" size="sm">
               Giriş Yap
             </Button>
-            <Button size="sm">Ücretsiz Dene</Button>
+            <Button size="sm" className="text-xs px-2">20 dk Deneme Dersi</Button>
           </div>
 
           <button
@@ -58,8 +58,8 @@ export function Header() {
                 <Button variant="ghost" size="sm" className="w-full">
                   Giriş Yap
                 </Button>
-                <Button size="sm" className="w-full">
-                  Ücretsiz Dene
+                <Button size="sm" className="w-full text-xs">
+                  20 dk Deneme Dersi
                 </Button>
               </div>
             </div>

@@ -271,7 +271,7 @@ export default function TYTOzelDersClientPage() {
               Hizmet Verdiğimiz Şehirler
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Türkiye'nin 81 ilinde online ve yüz yüze özel ders hizmeti
+              Türkiye'nin 81 ilinde yapay zeka destekli online özel ders hizmeti
             </p>
           </motion.div>
 

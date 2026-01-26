@@ -13,12 +13,12 @@ export const revalidate = 86400;
 export async function generateMetadata() {
   return {
     title:
-      "MatÖzel Eğitim Platformu | LGS, TYT, AYT Sınav Koçluğu ve Özel Ders",
+      "MatÖzel | Yapay Zeka Destekli Online Özel Ders ve Sınav Koçluğu",
     description:
-      "MatÖzel ile LGS, TYT ve AYT sınavlarına hazırlan. Türkiye geneli uzman koçlar, birebir özel ders ve aynı gün kaynak teslimatı.",
+      "AI destekli kişiselleştirilmiş online özel ders, LGS/TYT/AYT sınav koçluğu ve yazılım eğitimi. %100 online, yapay zeka ile öğrenme deneyimi.",
     openGraph: {
-      title: "MatÖzel Eğitim Platformu",
-      description: "LGS, TYT ve AYT sınav koçluğu ve özel ders hizmetleri.",
+      title: "MatÖzel | AI Destekli Online Eğitim Platformu",
+      description: "Yapay zeka ile kişiselleştirilmiş online özel ders ve koçluk hizmetleri.",
     },
   };
 }

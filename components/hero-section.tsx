@@ -49,12 +49,12 @@ export function HeroSection() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
           </span>
           <span className="text-sm font-medium text-primary">
-            2025-2026 Kayitlari Acildi
+            Yapay Zeka Destekli Online Eğitim
           </span>
         </motion.div>
 
         <TextGenerateEffect
-          words="Basariya Giden Yolda Yaninizdayiz"
+          words="Yapay Zeka ile Kişiselleştirilmiş Özel Ders"
           className="mb-6"
         />
 
@@ -64,8 +64,8 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Ortaokul ve lise ogrencileri icin kisisellestirilmis ozel dersler,
-          yazilim egitimi ve sinav koclugu ile hayallerinize ulasin.
+          AI destekli online özel ders, sınav koçluğu ve yazılım eğitimi ile 
+          hedeflerinize ulaşın. %100 online, %100 kişiselleştirilmiş.
         </motion.p>
 
         <motion.div
@@ -75,7 +75,7 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button size="lg" className="group text-base px-8">
-            Ucretsiz Deneme Dersi
+            20 dk Deneme Dersi
             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Button>
           <Button
@@ -84,7 +84,7 @@ export function HeroSection() {
             className="text-base px-8 bg-transparent"
           >
             <Play className="mr-2 w-4 h-4" />
-            Tanitim Videosu
+            AI Sistemini Keşfet
           </Button>
         </motion.div>
 
