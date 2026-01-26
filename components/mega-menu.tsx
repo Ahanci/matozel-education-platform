@@ -124,7 +124,7 @@ export function MegaMenu({ className }: MegaMenuProps) {
                   {levels.ortaokul.grades.map((grade) => (
                     <Link
                       key={grade.slug}
-                      href={`/ozel-ders/matematik/${grade.slug}`}
+                      href={`/ozel-ders/sinif/${grade.slug}`}
                       className="block px-3 py-2 text-sm rounded-lg hover:bg-secondary transition-colors"
                     >
                       {grade.name}
@@ -132,7 +132,7 @@ export function MegaMenu({ className }: MegaMenuProps) {
                   ))}
                   <div className="pt-2 mt-2 border-t">
                     <Link
-                      href="/ozel-ders/matematik/lgs"
+                      href="/sinav-koclugu/lgs"
                       className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
                     >
                       <FileText className="w-4 h-4" />
@@ -152,7 +152,7 @@ export function MegaMenu({ className }: MegaMenuProps) {
                   {levels.lise.grades.map((grade) => (
                     <Link
                       key={grade.slug}
-                      href={`/ozel-ders/matematik/${grade.slug}`}
+                      href={`/ozel-ders/sinif/${grade.slug}`}
                       className="block px-3 py-2 text-sm rounded-lg hover:bg-secondary transition-colors"
                     >
                       {grade.name}
@@ -160,14 +160,14 @@ export function MegaMenu({ className }: MegaMenuProps) {
                   ))}
                   <div className="pt-2 mt-2 border-t space-y-2">
                     <Link
-                      href="/ozel-ders/matematik/tyt"
+                      href="/sinav-koclugu/tyt"
                       className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
                     >
                       <FileText className="w-4 h-4" />
                       TYT Hazırlık
                     </Link>
                     <Link
-                      href="/ozel-ders/matematik/ayt"
+                      href="/sinav-koclugu/ayt"
                       className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"
                     >
                       <FileText className="w-4 h-4" />
@@ -198,8 +198,8 @@ export function MegaMenu({ className }: MegaMenuProps) {
               {/* LGS */}
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
-                    <span className="font-bold text-accent">LGS</span>
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <span className="font-bold text-primary">LGS</span>
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm">LGS</h3>
@@ -226,8 +226,8 @@ export function MegaMenu({ className }: MegaMenuProps) {
               {/* TYT */}
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
-                    <span className="font-bold text-primary">TYT</span>
+                  <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
+                    <span className="font-bold text-accent">TYT</span>
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm">TYT</h3>
@@ -254,8 +254,8 @@ export function MegaMenu({ className }: MegaMenuProps) {
               {/* AYT */}
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-chart-3/20 flex items-center justify-center">
-                    <span className="font-bold text-chart-3">AYT</span>
+                  <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                    <span className="font-bold text-blue-600">AYT</span>
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm">AYT</h3>
@@ -305,7 +305,7 @@ export function MegaMenu({ className }: MegaMenuProps) {
               {cities.map((city) => (
                 <Link
                   key={city.slug}
-                  href={`/ozel-ders/matematik/${city.slug}`}
+                  href={`/ozel-ders/konum/${city.slug}`}
                   className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg hover:bg-secondary transition-colors"
                 >
                   <MapPin className="w-4 h-4 text-primary" />
@@ -347,8 +347,8 @@ export function MegaMenu({ className }: MegaMenuProps) {
                 href="/sinav-koclugu/lgs"
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
-                  <span className="font-bold text-accent text-sm">LGS</span>
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <span className="font-bold text-primary text-sm">LGS</span>
                 </div>
                 <div>
                   <p className="font-medium text-sm">LGS Koçluğu</p>
@@ -359,8 +359,8 @@ export function MegaMenu({ className }: MegaMenuProps) {
                 href="/sinav-koclugu/tyt"
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                  <span className="font-bold text-blue-600 text-sm">TYT</span>
+                <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
+                  <span className="font-bold text-accent text-sm">TYT</span>
                 </div>
                 <div>
                   <p className="font-medium text-sm">TYT Koçluğu</p>
@@ -371,8 +371,8 @@ export function MegaMenu({ className }: MegaMenuProps) {
                 href="/sinav-koclugu/ayt"
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                  <span className="font-bold text-purple-600 text-sm">AYT</span>
+                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                  <span className="font-bold text-blue-600 text-sm">AYT</span>
                 </div>
                 <div>
                   <p className="font-medium text-sm">AYT Koçluğu</p>
@@ -494,21 +494,21 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
         {openSection === "sinavlar" && (
           <div className="mt-2 ml-4 space-y-1">
             <Link
-              href="/ozel-ders/matematik/lgs"
+              href="/sinav-koclugu/lgs"
               onClick={handleLinkClick}
               className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary font-medium text-accent"
             >
               LGS Hazırlık
             </Link>
             <Link
-              href="/ozel-ders/matematik/tyt"
+              href="/sinav-koclugu/tyt"
               onClick={handleLinkClick}
               className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary font-medium text-primary"
             >
               TYT Hazırlık
             </Link>
             <Link
-              href="/ozel-ders/matematik/ayt"
+              href="/sinav-koclugu/ayt"
               onClick={handleLinkClick}
               className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary font-medium text-chart-3"
             >
@@ -543,7 +543,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
             {levels.ortaokul.grades.map((grade) => (
               <Link
                 key={grade.slug}
-                href={`/ozel-ders/matematik/${grade.slug}`}
+                href={`/ozel-ders/sinif/${grade.slug}`}
                 onClick={handleLinkClick}
                 className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary"
               >
@@ -556,7 +556,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
             {levels.lise.grades.map((grade) => (
               <Link
                 key={grade.slug}
-                href={`/ozel-ders/matematik/${grade.slug}`}
+                href={`/ozel-ders/sinif/${grade.slug}`}
                 onClick={handleLinkClick}
                 className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary"
               >
@@ -589,7 +589,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
             {cities.map((city) => (
               <Link
                 key={city.slug}
-                href={`/ozel-ders/matematik/${city.slug}`}
+                href={`/ozel-ders/konum/${city.slug}`}
                 onClick={handleLinkClick}
                 className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary"
               >

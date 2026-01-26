@@ -8,46 +8,45 @@ import { cn } from "@/lib/utils";
 
 const pricingPlans = [
   {
-    name: "Başlangıç",
-    description: "Temel ders desteği arayanlar için",
-    price: "750",
-    period: "ders başına",
+    name: "Standart Paket",
+    description: "Birebir online özel ders",
+    price: "1.250",
+    period: "saat başı",
     features: [
-      "Birebir özel ders",
-      "Ders notları ve kaynaklar",
-      "WhatsApp destek grubu",
-      "Haftalık ilerleme raporu",
+      "Birebir canlı ders",
+      "Kişiye özel müfredat",
+      "Ders notları (PDF)",
+      "Veli bilgilendirme",
     ],
     popular: false,
   },
   {
-    name: "Profesyonel",
-    description: "Yoğun hazırlık yapacaklar için",
-    price: "2.500",
-    period: "aylık (8 ders)",
+    name: "Kampanyalı Paket",
+    description: "8 ders alana 1 yazılım dersi hediye",
+    price: "10.000",
+    period: "8 derslik paket",
     features: [
-      "Haftalık 2 ders",
-      "Sınırsız soru çözümü",
-      "Online kaynak erişimi",
-      "Kişisel çalışma planı",
-      "Aylık veli görüşmesi",
-      "Deneme sınavları",
+      "8 Saat Canlı Ders",
+      "+1 Saat Yazılım Dersi Hediye",
+      "Ücretsiz Kaynak Gönderimi",
+      "Haftalık Planlama",
+      "WhatsApp Soru Çözümü",
+      "Ayda 1 Deneme Analizi",
     ],
     popular: true,
   },
   {
     name: "Sınav Koçluğu",
-    description: "LGS/YKS hedefleyenler için",
+    description: "LGS/YKS tam kapsamlı koçluk",
     price: "4.000",
     period: "aylık",
     features: [
-      "Haftalık 4 ders",
-      "Birebir koçluk seansları",
-      "Tam kaynak paketi",
-      "Strateji eğitimi",
-      "Motivasyon desteği",
-      "7/24 soru desteği",
-      "Aylık analiz raporları",
+      "Haftalık 4 Görüşme",
+      "Günlük Program Takibi",
+      "Detaylı Deneme Analizi",
+      "Stres Yönetimi",
+      "Tercih Danışmanlığı",
+      "7/24 Motivasyon",
     ],
     popular: false,
   },
@@ -91,9 +90,9 @@ export function PricingSection() {
               )}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-primary text-primary-foreground text-xs font-semibold px-4 py-1.5 rounded-full">
-                    En Popüler
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-full text-center">
+                  <span className="bg-primary text-primary-foreground text-xs font-bold px-4 py-1.5 rounded-full shadow-md">
+                    8 ALANA 1 YAZILIM DERSİ HEDİYE
                   </span>
                 </div>
               )}

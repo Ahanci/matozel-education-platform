@@ -125,7 +125,7 @@ export function SubjectInfo({ subject, city, exam, grade }: SubjectInfoProps) {
                 </h3>
                 <p className="text-muted-foreground">
                   {subject.name} kaynakları Türkiye&apos;nin 81 iline aynı gün
-                  kargo ile gönderilir
+                  temin edilir.
                 </p>
               </div>
             </div>
