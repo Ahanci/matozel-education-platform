@@ -233,8 +233,10 @@ export default function TYTOzelDersClientPage() {
                         </span>
                         <span className="text-muted-foreground">₺/saat</span>
                       </div>
-                      <Button className="w-full" variant="outline">
-                        Ders Al
+                      <Button className="w-full" variant="outline" asChild>
+                        <Link href={`/ozel-ders/${subject.slug}/tyt`}>
+                          Ders Al
+                        </Link>
                       </Button>
                     </div>
                   </div>

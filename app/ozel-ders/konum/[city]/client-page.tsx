@@ -166,7 +166,7 @@ export function CityPageClient({ citySlug }: CityPageClientProps) {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <Link href={`/ozel-ders/${subject.slug}`}>
+                  <Link href={`/ozel-ders/${subject.slug}/${citySlug}`}>
                     <Card className="p-6 h-full hover:border-primary/50 transition-colors group">
                       <div className="flex items-start justify-between mb-4">
                         <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">

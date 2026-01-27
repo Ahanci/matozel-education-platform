@@ -211,8 +211,10 @@ export default function LGSOzelDersClientPage() {
                         </span>
                         <span className="text-muted-foreground">₺/saat</span>
                       </div>
-                      <Button className="w-full" variant="outline">
-                        Ders Al
+                      <Button className="w-full" variant="outline" asChild>
+                        <Link href={`/ozel-ders/${subject.slug}/lgs`}>
+                          Ders Al
+                        </Link>
                       </Button>
                     </div>
                   </div>
