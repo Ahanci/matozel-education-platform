@@ -425,6 +425,152 @@ export default function TYTOzelDersClientPage() {
         </div>
       </section>
 
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-4">
+              TYT Öğrencilerimizden Yorumlar
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              TYT sınavında başarı hikayesi yaşayan öğrencilerimizin deneyimleri
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Zeynep A.",
+                exam: "TYT",
+                score: "430 puan",
+                text: "TYT matematik konularında büyük ilerleme kaydettim. Öğretmenim her konuyu özenle anlattı.",
+                rating: 5,
+              },
+              {
+                name: "Kaan Y.",
+                exam: "TYT",
+                score: "450 puan",
+                text: "Fen bilimleri dersinde eksiklerimi tamamladım, hedeflediğim üniversiteyi kazandım!",
+                rating: 5,
+              },
+              {
+                name: "Selin T.",
+                exam: "TYT",
+                score: "440 puan",
+                text: "Türkçe ve sosyal derslerde netlerimi artırdım. TYT hazırlık sürecim çok verimli geçti.",
+                rating: 5,
+              },
+            ].map((review, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className="p-6 h-full border-none shadow-lg">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-primary text-primary"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {review.text}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
+                      <span className="font-semibold text-blue-600">
+                        {review.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-sm">
+                        {review.name}
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        {review.exam} - {review.score}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-4">Sıkça Sorulan Sorular</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              TYT özel ders hakkında merak edilenler
+            </p>
+          </motion.div>
+
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible>
+              {[
+                {
+                  question: "TYT özel dersleri ne kadar sürer?",
+                  answer:
+                    "TYT hazırlık süreci öğrencinin durumuna göre 6-12 ay arasında değişir. Haftada ortalama 4-6 saat ders almanızı öneriyoruz.",
+                },
+                {
+                  question: "Online TYT özel ders nasıl işler?",
+                  answer:
+                    "Online derslerimizde interaktif tahta, paylaşımlı ekran ve dijital materyaller kullanıyoruz. Ders kayıtları tekrar izlenmek üzere saklanır.",
+                },
+                {
+                  question: "TYT hangi dersleri kapsar?",
+                  answer:
+                    "TYT'de Türkçe (40 soru), Matematik (40 soru), Fen Bilimleri (20 soru) ve Sosyal Bilimler (20 soru) olmak üzere toplam 120 soru bulunur.",
+                },
+                {
+                  question: "TYT özel ders ücretleri nedir?",
+                  answer:
+                    "TYT özel ders ücretleri derslere göre değişiklik gösterir. Türkçe 600₺, Matematik 700₺, Fen Bilimleri 650₺ ve Sosyal Bilimler 550₺/saat'tir.",
+                },
+                {
+                  question: "Ücretsiz deneme dersi var mı?",
+                  answer:
+                    "Evet, ilk dersiniz tamamen ücretsiz! Öğretmenimizle tanışıp eğitim sistemimizi deneyimleyebilirsiniz.",
+                },
+              ].map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <AccordionItem value={`item-${index}`}>
+                    <AccordionTrigger className="text-left font-medium">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                </motion.div>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gradient-to-br from-blue-500/10 to-green-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
